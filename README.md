@@ -56,30 +56,30 @@
 
 ## 1. Introduction
 
-Introducing DeepSeek LLM, an advanced language model comprising 67 billion parameters. It has been trained from scratch on a vast dataset of 2 trillion tokens in both English and Chinese. In order to foster research, we have made DeepSeek LLM 7B/67B Base and DeepSeek LLM 7B/67B Chat open source for the research community.
+Introducing JumboLLM, an advanced language model comprising 67 billion parameters. It has been trained from scratch on a vast dataset of 2 trillion tokens in both English and Chinese. In order to foster research, we have made JumboLLM 7B/67B Base and DeepSeek LLM 7B/67B Chat open source for the research community.
 
 <div align="center">
   <img src="images/llm_radar.png" alt="result" width="70%">
 </div>
 
- - **Superior General Capabilities:** DeepSeek LLM 67B Base outperforms Llama2 70B Base in areas such as reasoning, coding, math, and Chinese comprehension.
+ - **Superior General Capabilities:** JumboLLM 67B Base outperforms Llama2 70B Base in areas such as reasoning, coding, math, and Chinese comprehension.
 
- - **Proficient in Coding and Math:** DeepSeek LLM 67B Chat exhibits outstanding performance in coding (HumanEval Pass@1: 73.78) and mathematics (GSM8K 0-shot: 84.1, Math 0-shot: 32.6). It also demonstrates remarkable generalization abilities, as evidenced by its exceptional score of 65 on the Hungarian National High School Exam.
+ - **Proficient in Coding and Math:** JumboLLM 67B Chat exhibits outstanding performance in coding (HumanEval Pass@1: 73.78) and mathematics (GSM8K 0-shot: 84.1, Math 0-shot: 32.6). It also demonstrates remarkable generalization abilities, as evidenced by its exceptional score of 65 on the Hungarian National High School Exam.
 
- - **Mastery in Chinese Language:** Based on our evaluation, DeepSeek LLM 67B Chat surpasses GPT-3.5 in Chinese.
+ - **Mastery in Chinese Language:** Based on our evaluation, JumboLLM 67B Chat surpasses GPT-3.5 in Chinese.
 
 ## 2. Model Downloads
 
-We release the DeepSeek LLM 7B/67B, including both base and chat models, to the public. To support a broader and more diverse range of research within both academic and commercial communities, we are providing access to the intermediate checkpoints of the base model from its training process. Please **note** that the use of this model is subject to the terms outlined in [License section](#8-license). Commercial usage is permitted under these terms.
+We release the JumboLLM 7B/67B, including both base and chat models, to the public. To support a broader and more diverse range of research within both academic and commercial communities, we are providing access to the intermediate checkpoints of the base model from its training process. Please **note** that the use of this model is subject to the terms outlined in [License section](#8-license). Commercial usage is permitted under these terms.
 
 ### Huggingface
 
 |         Model         | Sequence Length |                                Download                                 |
 |:---------------------:|:---------------:|:-----------------------------------------------------------------------:|
-| DeepSeek LLM 7B Base  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-7b-base)  |
-| DeepSeek LLM 7B Chat  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat)  |
-| DeepSeek LLM 67B Base |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-67b-base) |
-| DeepSeek LLM 67B Chat |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat) |
+| Jumbo LLM 7B Base  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-7b-base)  |
+| Jumbo LLM 7B Chat  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat)  |
+| Jumbo LLM 67B Base |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-67b-base) |
+| Jumbo LLM 67B Chat |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat) |
 
 ### Intermediate Checkpoints
 
@@ -88,10 +88,10 @@ We host the intermediate checkpoints of DeepSeek LLM 7B/67B on AWS S3 (Simple St
 ```
 # using AWS CLI
 
-# DeepSeek-LLM-7B-Base
+# Jumbo-LLM-7B-Base
 aws s3 cp s3://deepseek-ai/DeepSeek-LLM/DeepSeek-LLM-7B-Base <local_path> --recursive --request-payer
 
-# DeepSeek-LLM-67B-Base
+# Jumbo-LLM-67B-Base
 aws s3 cp s3://deepseek-ai/DeepSeek-LLM/DeepSeek-LLM-67B-Base <local_path> --recursive  --request-payer
 ```
 
@@ -106,8 +106,8 @@ We evaluate our models and some baseline models on a series of representative be
 |                 |    0-shot     |    5-shot    | 5-shot | 8-shot |    0-shot     | 3-shot | 5-shot | 5-shot |    5-shot     |
 | LLaMA-2<br>-7B  |     75.6      |     63.8     |  45.8  |  15.5  |     14.6      |  38.5  |  33.9  |  32.6  |     21.5      |
 | LLaMA-2<br>-70B |     84.0      |     79.5     |  69.0  |  58.4  |     28.7      |  62.9  |  51.4  |  53.1  |     50.2      |
-| DeepSeek LLM<br>7B Base|     75.4      |     59.7     |  48.2  |  17.4  |     26.2      |  39.5  |  45.0  |  47.2  |     78.0      |
-| DeepSeek LLM<br>67B Base|     84.0      |     78.9     |  71.3  |  63.4  |     42.7      |  68.7  |  66.1  |  70.8  |     87.6      |
+| Jumbo LLM<br>7B Base|     75.4      |     59.7     |  48.2  |  17.4  |     26.2      |  39.5  |  45.0  |  47.2  |     78.0      |
+| Jumbo LLM<br>67B Base|     84.0      |     78.9     |  71.3  |  63.4  |     42.7      |  68.7  |  66.1  |  70.8  |     87.6      |
 
 **Note:** ChineseQA is an in-house benchmark, inspired by TriviaQA.
 
@@ -126,7 +126,7 @@ In line with Grok-1, we have evaluated the model's mathematical capabilities usi
   <img src="images/mathexam.png" alt="result" width="70%">
 </div>
 
-**Remark:** Some results are obtained by DeepSeek LLM authors, while others are done by Grok-1 authors. We found some models count the score of the last question (Llemma 34b and Mammoth) while some (MetaMath-7B) are not in the original evaluation. In our evaluation, we count the last question score. Evaluation details are [here](https://github.com/deepseek-ai/DeepSeek-LLM/tree/HEAD/evaluation/hungarian_national_hs_solutions).
+**Remark:** Some results are obtained by Jumbo LLM authors, while others are done by Grok-1 authors. We found some models count the score of the last question (Llemma 34b and Mammoth) while some (MetaMath-7B) are not in the original evaluation. In our evaluation, we count the last question score. Evaluation details are [here](https://github.com/deepseek-ai/DeepSeek-LLM/tree/HEAD/evaluation/hungarian_national_hs_solutions).
 
 
 ---
@@ -154,10 +154,10 @@ The specific questions and test cases will be released soon. Stay tuned!
 
 | Model                 | TriviaQA | MMLU | GSM8K | HumanEval | BBH  | C-Eval | CMMLU |ChineseQA|
 |-----------------------|----------|------|-------|-----------|------|--------|-------|-------|
-| DeepSeek LLM 7B  Base | 59.7     | 48.2 | 17.4  | 26.2      | 39.5 | 45.0   | 47.2  |  78.0 |
-| DeepSeek LLM 67B Base | 78.9     | 71.3 | 63.4  | 42.7      | 68.7 | 66.1   | 70.8  |  87.6 |
-| DeepSeek LLM 7B Chat  | 57.9     | 49.4 | 62.6  | 48.2      | 42.3 | 47.0   | 49.7  |  75.0 |
-| DeepSeek LLM 67B Chat | 81.5     | 71.1 | 84.1  | 73.8      | 71.7 | 65.2   | 67.8  |  85.1 |
+| Jumbo LLM 7B  Base | 59.7     | 48.2 | 17.4  | 26.2      | 39.5 | 45.0   | 47.2  |  78.0 |
+| Jumbo LLM 67B Base | 78.9     | 71.3 | 63.4  | 42.7      | 68.7 | 66.1   | 70.8  |  87.6 |
+| Jumbo LLM 7B Chat  | 57.9     | 49.4 | 62.6  | 48.2      | 42.3 | 47.0   | 49.7  |  75.0 |
+| Jumbo LLM 67B Chat | 81.5     | 71.1 | 84.1  | 73.8      | 71.7 | 65.2   | 67.8  |  85.1 |
 
 **Note:** We evaluate chat models with 0-shot for MMLU, GSM8K, C-Eval, and CMMLU. More evaluation results can be found [here](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/evaluation/more_results.md).
 
@@ -167,8 +167,8 @@ Based on our experimental observations, we have discovered that enhancing benchm
 
 | Model                     | MMLU  | C-Eval | CMMLU |
 |---------------------------|-------|--------|-------|
-| DeepSeek LLM 7B Chat      | 49.4  | 47.0   | 49.7  |
-| DeepSeek LLM 7B Chat + MC | 60.9  | 71.3   | 73.8  |
+| Jumbo LLM 7B Chat      | 49.4  | 47.0   | 49.7  |
+| Jumbo LLM 7B Chat + MC | 60.9  | 71.3   | 73.8  |
 
 **Note:** +MC represents the addition of 20 million Chinese multiple-choice questions collected from the web. It is important to note that we conducted deduplication for the C-Eval validation set and CMMLU test set to prevent data contamination. This addition not only improves Chinese multiple-choice benchmarks but also enhances English benchmarks. However, we observed that it does not enhance the model's knowledge performance on other evaluations that do not utilize the multiple-choice style in the 7B setting. As a result, **we made the decision to not incorporate MC data in the pre-training or fine-tuning process**, as it would lead to overfitting on benchmarks.
 
@@ -188,9 +188,9 @@ We have also significantly incorporated deterministic randomization into our dat
 - **Deduplication**: Our advanced deduplication system, using MinhashLSH, strictly removes duplicates both at document and string levels. This rigorous deduplication process ensures exceptional data uniqueness and integrity, especially crucial in large-scale datasets.
 
 ### Pre-Training
-DeepSeek LM models use the same architecture as LLaMA, an auto-regressive transformer decoder model. The 7B model uses Multi-Head attention (MHA) while the 67B model uses Grouped-Query Attention (GQA).
+Jumbo LM models use the same architecture as LLaMA, an auto-regressive transformer decoder model. The 7B model uses Multi-Head attention (MHA) while the 67B model uses Grouped-Query Attention (GQA).
 
-We pre-trained DeepSeek language models on a vast dataset of 2 trillion tokens, with a sequence length of 4096 and AdamW optimizer. The 7B model's training involved a batch size of 2304 and a learning rate of 4.2e-4 and the 67B model was trained with a batch size of 4608 and a learning rate of 3.2e-4. We employ a multi-step learning rate schedule in our training process. The learning rate begins with 2000 warmup steps, and then it is stepped to 31.6% of the maximum at 1.6 trillion tokens and 10% of the maximum at 1.8 trillion tokens.
+We pre-trained Jumbo language models on a vast dataset of 2 trillion tokens, with a sequence length of 4096 and AdamW optimizer. The 7B model's training involved a batch size of 2304 and a learning rate of 4.2e-4 and the 67B model was trained with a batch size of 4608 and a learning rate of 3.2e-4. We employ a multi-step learning rate schedule in our training process. The learning rate begins with 2000 warmup steps, and then it is stepped to 31.6% of the maximum at 1.6 trillion tokens and 10% of the maximum at 1.8 trillion tokens.
 
 We release the training loss curve and several benchmark metrics curves, as detailed below.
 
@@ -224,7 +224,7 @@ You can directly employ [Huggingface's Transformers](https://github.com/huggingf
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-model_name = "deepseek-ai/deepseek-llm-67b-base"
+model_name = "Jumbo-ai/Jumbo-llm-67b-base"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="auto")
 model.generation_config = GenerationConfig.from_pretrained(model_name)
@@ -244,7 +244,7 @@ print(result)
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-model_name = "deepseek-ai/deepseek-llm-67b-chat"
+model_name = "Jumbo-ai/Jumbo-llm-67b-chat"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="auto")
 model.generation_config = GenerationConfig.from_pretrained(model_name)
@@ -281,7 +281,7 @@ from vllm import LLM, SamplingParams
 
 tp_size = 4 # Tensor Parallelism
 sampling_params = SamplingParams(temperature=0.7, top_p=0.9, max_tokens=100)
-model_name = "deepseek-ai/deepseek-llm-67b-base"
+model_name = "Jumbo-ai/Jumbo-llm-67b-base"
 llm = LLM(model=model_name, trust_remote_code=True, gpu_memory_utilization=0.9, tensor_parallel_size=tp_size)
 
 prompts = [
@@ -299,7 +299,7 @@ print(generated_text)
 
 ### Could You Provide the tokenizer.model File for Model Quantization?
 
-DeepSeek LLM utilizes the [HuggingFace Tokenizer](https://huggingface.co/docs/tokenizers/index) to implement the Byte-level BPE algorithm, with specially designed pre-tokenizers to ensure optimal performance. Currently, there is no direct way to convert the tokenizer into a SentencePiece tokenizer. We are contributing to the open-source quantization methods facilitate the usage of HuggingFace Tokenizer.
+Jumbo LLM utilizes the [HuggingFace Tokenizer](https://huggingface.co/docs/tokenizers/index) to implement the Byte-level BPE algorithm, with specially designed pre-tokenizers to ensure optimal performance. Currently, there is no direct way to convert the tokenizer into a SentencePiece tokenizer. We are contributing to the open-source quantization methods facilitate the usage of HuggingFace Tokenizer.
 
 #### GGUF(llama.cpp)
 
@@ -315,7 +315,7 @@ git checkout regex_gpt2_preprocess
 make
 python3 -m pip install -r requirements.txt
 # generate GGUF model
-python convert-hf-to-gguf.py <MODEL_PATH> --outfile <GGUF_PATH> --model-name deepseekllm
+python convert-hf-to-gguf.py <MODEL_PATH> --outfile <GGUF_PATH> --model-name Jumbollm
 # use q4_0 quantization as an example
 ./quantize <GGUF_PATH> <OUTPUT_PATH> q4_0
 ./main -m <OUTPUT_PATH> -n 128 -p <PROMPT>
@@ -328,17 +328,17 @@ python convert-hf-to-gguf.py <MODEL_PATH> --outfile <GGUF_PATH> --model-name dee
 
 We profile the peak memory usage of inference for 7B and 67B models at different batch size and sequence length settings.
 
-For DeepSeek LLM 7B, we utilize **1 NVIDIA A100-PCIE-40GB GPU** for inference.
+For Jumbo LLM 7B, we utilize **1 NVIDIA A100-PCIE-40GB GPU** for inference.
 
 <table><thead><tr><th rowspan="2">Batch Size</th><th colspan="5">Sequence Length</th></tr><tr><th>256</th><th>512</th><th>1024</th><th>2048</th><th>4096</th></tr></thead><tbody><tr><td>1</td><td>13.29 GB</td><td>13.63 GB</td><td>14.47 GB</td><td>16.37 GB</td><td>21.25 GB</td></tr><tr><td>2</td><td>13.63 GB</td><td>14.39 GB</td><td>15.98 GB</td><td>19.82 GB</td><td>29.59 GB</td></tr><tr><td>4</td><td>14.47 GB</td><td>15.82 GB</td><td>19.04 GB</td><td>26.65 GB</td><td>OOM</td></tr><tr><td>8</td><td>15.99 GB</td><td>18.71 GB</td><td>25.14 GB</td><td>35.19 GB</td><td>OOM</td></tr><tr><td>16</td><td>19.06 GB</td><td>24.52 GB</td><td>37.28 GB</td><td>OOM</td><td>OOM</td></tr></tbody></table>
 
-For DeepSeek LLM 67B, we utilize **8 NVIDIA A100-PCIE-40GB GPUs** for inference.
+For Jumbo LLM 67B, we utilize **8 NVIDIA A100-PCIE-40GB GPUs** for inference.
 
 <table><thead><tr><th rowspan="2">Batch Size</th><th colspan="5">Sequence Length</th></tr><tr><th>256</th><th>512</th><th>1024</th><th>2048</th><th>4096</th></tr></thead><tbody><tr><td>1</td><td>16.92 GB</td><td>17.11 GB</td><td>17.66 GB</td><td>20.01 GB</td><td>33.23 GB</td></tr><tr><td>2</td><td>17.04 GB</td><td>17.28 GB</td><td>18.55 GB</td><td>25.27 GB</td><td>OOM</td></tr><tr><td>4</td><td>17.20 GB</td><td>17.80 GB</td><td>21.28 GB</td><td>33.71 GB</td><td>OOM</td></tr><tr><td>8</td><td>17.59 GB</td><td>19.25 GB</td><td>25.69 GB</td><td>OOM</td><td>OOM</td></tr><tr><td>16</td><td>18.17 GB</td><td>21.69 GB</td><td>34.54 GB</td><td>OOM</td><td>OOM</td></tr></tbody></table>
 
 ## 7. Limitation
 
-While DeepSeek LLMs have demonstrated impressive capabilities, they are not without their limitations. Here are some potential drawbacks of such models:
+While Jumbo LLMs have demonstrated impressive capabilities, they are not without their limitations. Here are some potential drawbacks of such models:
 
 1. Over-reliance on training data: These models are trained on vast amounts of text data, which can introduce biases present in the data. They may inadvertently generate biased or discriminatory responses, reflecting the biases prevalent in the training data.
 
@@ -348,18 +348,18 @@ While DeepSeek LLMs have demonstrated impressive capabilities, they are not with
 
 ## 8. License
 
-This code repository is licensed under [the MIT License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-CODE). The use of DeepSeek LLM Base/Chat models is subject to [the Model License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-MODEL). DeepSeek LLM series (including Base and Chat) supports commercial use.
+This code repository is licensed under [the MIT License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-CODE). The use of Jumbo LLM Base/Chat models is subject to [the Model License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-MODEL). Jumbo LLM series (including Base and Chat) supports commercial use.
 
 ## 9. Citation
 
 ```
-@misc{deepseek-llm,
-  author = {DeepSeek AI},
-  title = {DeepSeek LLM: Let there be answers},
+@misc{Jumbo-llm,
+  author = {Jumbo AI},
+  title = {Jumbo LLM: Let there be answers},
   year = {2023},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/deepseek-ai/DeepSeek-LLM}},
+  howpublished = {\url{https://github.com/Jumbo-ai/Jumbo-LLM}},
 }
 ```
 
