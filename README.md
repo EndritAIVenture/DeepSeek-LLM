@@ -3,7 +3,7 @@
 <!-- markdownlint-disable no-duplicate-header -->
 
 <div align="center">
-  <img src="images/logo.svg" width="60%" alt="DeepSeek LLM" />
+  <img src="images/logo.svg" width="60%" alt="JUMBOLLM"
 </div>
 <hr>
 <div align="center">
