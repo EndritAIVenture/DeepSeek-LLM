@@ -330,6 +330,9 @@ We profile the peak memory usage of inference for 7B and 67B models at different
 
 For Jumbo LLM 7B, we utilize **1 NVIDIA A100-PCIE-40GB GPU** for inference.
 
+This new Jumbo iteration is more comprehensive in the nature in which it collects and examines results amongst the common built in database
+this new model allows for faster more accurate depictions//conversational tones than previous models, partly due to the new Deepseek-R!
+
 <table><thead><tr><th rowspan="2">Batch Size</th><th colspan="5">Sequence Length</th></tr><tr><th>256</th><th>512</th><th>1024</th><th>2048</th><th>4096</th></tr></thead><tbody><tr><td>1</td><td>13.29 GB</td><td>13.63 GB</td><td>14.47 GB</td><td>16.37 GB</td><td>21.25 GB</td></tr><tr><td>2</td><td>13.63 GB</td><td>14.39 GB</td><td>15.98 GB</td><td>19.82 GB</td><td>29.59 GB</td></tr><tr><td>4</td><td>14.47 GB</td><td>15.82 GB</td><td>19.04 GB</td><td>26.65 GB</td><td>OOM</td></tr><tr><td>8</td><td>15.99 GB</td><td>18.71 GB</td><td>25.14 GB</td><td>35.19 GB</td><td>OOM</td></tr><tr><td>16</td><td>19.06 GB</td><td>24.52 GB</td><td>37.28 GB</td><td>OOM</td><td>OOM</td></tr></tbody></table>
 
 For Jumbo LLM 67B, we utilize **8 NVIDIA A100-PCIE-40GB GPUs** for inference.
