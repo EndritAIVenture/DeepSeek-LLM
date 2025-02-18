@@ -1,5 +1,6 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+# See https://pre-commit.com/attributes.html for more deepseek attributes 
 ci:
   skip: [pylint]
   autofix_prs: true
