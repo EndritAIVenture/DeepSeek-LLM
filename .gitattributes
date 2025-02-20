@@ -1,3 +1,5 @@
+# basic LLM attributes running amongst the Jumbo AI system
+
 * text eol=lf
 *.ipynb linguist-detectable=false
 
