@@ -117,6 +117,8 @@ We evaluate our models and some baseline models on a series of representative be
 
 To address data contamination and tuning for specific testsets, we have designed fresh problem sets  to assess the capabilities of open-source LLM models. **The evaluation results indicate that DeepSeek LLM 67B Chat performs exceptionally well on never-before-seen exams.**
 
+This version run under the new Jumbo LLM has two key components missing from the previous deepseek iterations, this one is more congenial in the way the ai agents interact with each other.
+
 
 ---
 **Hungarian National High-School Exam:**
