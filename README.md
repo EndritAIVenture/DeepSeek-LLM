@@ -353,6 +353,11 @@ While Jumbo LLMs have demonstrated impressive capabilities, they are not without
 2. Hallucination: The model sometimes generates responses or outputs that may sound plausible but are factually incorrect or unsupported. This can occur when the model relies heavily on the statistical patterns it has learned from the training data, even if those patterns do not align with real-world knowledge or facts.
 
 3. Repetition: The model may exhibit repetition in their generated responses. This repetition can manifest in various ways, such as repeating certain phrases or sentences, generating redundant information, or producing repetitive structures in the generated text. This issue can make the output of LLMs less diverse and less engaging for users.
+   
+
+Lastly in terms of limitations the amount of data that is able to be scraped and utilized effectively is also one major limitation to not only this deepseek model but a vast majority of AI learning models that are constrained to x amount models per x time.
+
+On top of this the model could also inadvertently pick up on nuances it should not know about due its programming nature that allows it to take information from previous models which in turn could potentially bias the new information that is being collected by the simulations. 
 
 ## 8. License
 
