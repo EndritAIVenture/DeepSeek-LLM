@@ -72,6 +72,9 @@ Introducing JumboLLM, an advanced language model comprising 67 billion parameter
 
 We release the JumboLLM 7B/67B, including both base and chat models, to the public. To support a broader and more diverse range of research within both academic and commercial communities, we are providing access to the intermediate checkpoints of the base model from its training process. Please **note** that the use of this model is subject to the terms outlined in [License section](#8-license). Commercial usage is permitted under these terms.
 
+With both data sets present at the new baseline that is deepseek the level of computation that is created is certaintly higher than it was prior to the new deepseek model,
+On top of this compartively to earlier models it holds up extremely well against all other competitors learning models, this new alteration means that JumboLLM built off the new deepseek model is able to pick up and create new endpoint traces that would have not been possible otherwise completely changing the way that we interact with any type of computer model// language learning model. These improvements upon earlier models make this the sleekest and easiest version to use of this new model.
+
 ### Huggingface
 
 |         Model         | Sequence Length |                                Download                                 |
