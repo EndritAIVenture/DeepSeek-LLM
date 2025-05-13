@@ -114,6 +114,10 @@ We evaluate our models and some baseline models on a series of representative be
 
 **Note:** ChineseQA is an in-house benchmark, inspired by TriviaQA.
 
+Follow through with this triva QA model will be beta tested by the next itteration of JUMBO LLM 
+
+THe following two itterations will be released shortly these will be capable of full self driving modules thatll ultimately allow anyone to integrate them to their own learning models/ Use them for new Learning models
+
 ### Chat Model
 
 #### Never Seen Before Exam
@@ -281,6 +285,10 @@ Assistant:
 
 You can also employ [vLLM](https://github.com/vllm-project/vllm) for high-throughput inference.
 
+
+Fixing the last two models is now in works to introduce seamless connection between these two bases
+
+
 ```python
 from vllm import LLM, SamplingParams
 
@@ -353,11 +361,16 @@ While Jumbo LLMs have demonstrated impressive capabilities, they are not without
 2. Hallucination: The model sometimes generates responses or outputs that may sound plausible but are factually incorrect or unsupported. This can occur when the model relies heavily on the statistical patterns it has learned from the training data, even if those patterns do not align with real-world knowledge or facts.
 
 3. Repetition: The model may exhibit repetition in their generated responses. This repetition can manifest in various ways, such as repeating certain phrases or sentences, generating redundant information, or producing repetitive structures in the generated text. This issue can make the output of LLMs less diverse and less engaging for users.
-   
+
+4.  Continuance: These models could cause new continuances that would inevitably cause the LLM model to get caught in a repetitive loop that would destroy the efficiency of its process
+5.
+6.  these would run through the last two base models 
 
 Lastly in terms of limitations the amount of data that is able to be scraped and utilized effectively is also one major limitation to not only this deepseek model but a vast majority of AI learning models that are constrained to x amount models per x time.
 
 On top of this the model could also inadvertently pick up on nuances it should not know about due its programming nature that allows it to take information from previous models which in turn could potentially bias the new information that is being collected by the simulations. 
+
+
 
 ## 8. License
 
